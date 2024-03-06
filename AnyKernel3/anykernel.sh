@@ -5,21 +5,21 @@
 # begin properties
 properties() { '
 kernel.string=SUPER.KERNEL ANGELICA || REDMI 9C
-do.devicecheck=1
+do.devicecheck=0
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=angelica
-device.name2=
+device.name2=angelican
+device.name3=angelicain
 supported.versions=
 '; } # end properties
 
 # shell variables
-block=auto;
-is_slot_device=auto;
+block=/dev/block/mmcblk0p33;
+is_slot_device=0;
 ramdisk_compression=auto;
-patch_vbmeta_flag=auto;
 
 
 ## AnyKernel methods (DO NOT CHANGE)

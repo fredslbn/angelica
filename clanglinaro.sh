@@ -20,7 +20,7 @@ DEVICE=angelican
 DEFCONFIG=angelican_defconfig
 
 # Files
-IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz-dtb
+IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz
 #DTBO=$(pwd)/out/arch/arm64/boot/dtbo.img
 #DTB=$(pwd)/out/arch/arm64/boot/dts/mediatek
 
@@ -42,7 +42,7 @@ ZIPNAME="SUPER.KERNEL-ANGELICA-(clang-linaro)-$(TZ=Asia/Jakarta date +"%Y%m%d-%H
 ##----------------------------------------------------------##
 # Specify compiler.
 
-COMPILER=clang9
+COMPILER=clang14-7
 
 ##----------------------------------------------------------##
 # Specify Linker
@@ -186,7 +186,7 @@ START=$(date +"%s")
 	       CC=$KERNEL_CLANG \
            CROSS_COMPILE=$KERNEL_CCOMPILE64 \
            CROSS_COMPILE_ARM32=$KERNEL_CCOMPILE32 \
-           #CLANG_TRIPLE=aarch64-linux-gnu- \
+           CLANG_TRIPLE=aarch64-linux-gnu- \
            LD=${LINKER} \
            #LLVM=1 \
            #LLVM_IAS=1 \
